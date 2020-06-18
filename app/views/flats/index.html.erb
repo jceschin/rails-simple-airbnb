@@ -1,0 +1,31 @@
+<div class="banner">
+  <p>Simple Airbnb</p>
+</div>
+
+<div class="container">
+  <div class="general-info">
+    <h2>All our flats</h2>
+    <p>All 3 flats.</p>
+  </div>
+
+  <div class="flats">
+    <% @flats.each do |flat| %>
+      <div class="flat">
+        <div class="flat-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+        <div class="flat-content">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.description %></p>
+          <div class="flex">
+            <p class="guests"><%= flat.price_per_night %></p>
+            <p class="nights"><%= flat.number_of_guests %></p>
+          </div>
+        </div>
+        <div class="flat-actions">
+          <p>More info</p>
+          <p>Edit</p>
+          <p>Remove</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
